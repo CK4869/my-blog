@@ -1,1 +1,1 @@
-[Google] ( http://www.google.com） {target = “_ blank”}
+<a href="http://google.com/" target="_blank"> Xin chào! </a>
