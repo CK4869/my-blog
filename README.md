@@ -1,1 +1,1 @@
-<a href="http://google.com/" target="_blank"> Xin chào! </a>
+[xin chao](https://github.com/CK4869/my-blog/tree/master/style.css)
