@@ -1,4 +1,5 @@
-tạo model từ database
+
+<!--tạo model từ database
 Scaffold-Dbcontext "Data Source=COOL-KID\SQLEXPRESS;Initial Catalog=QLBanHang;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir models
 
 cập nhật model khi database thay đổi
@@ -24,7 +25,7 @@ số nguyên > 0: "^\d*[1-9]{1}\d*$"
                 </Trigger>
             </Style.Triggers>
         </Style>
-        
+
         <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
             <Grid>
                 <Ellipse Fill="Cyan"></Ellipse>
@@ -128,13 +129,15 @@ using System.Windows.Shapes;
 
 namespace De_thi_mau_00
 {
-    /// <summary>
+    ///
+<summary>
     /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    ///</summary>
+public partial class MainWindow : Window
     {
         SALESMANAGEMENTContext db = new();
-        List<Category> categories = new();
+        List
+<Category>categories = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -142,7 +145,8 @@ namespace De_thi_mau_00
         private void refreshData()
         {
             var products = from pro in db.Products
-                           where pro.Quantity <= 150
+                           where pro.Quantity
+    <= 150
                            orderby pro.ProductName ascending
                            select new
                            {
@@ -282,9 +286,9 @@ namespace De_thi_mau_00
         }
     }
 }
-  
-  
-<Window x:Class="De_thi_mau_00.Window1"
+
+
+        <Window x:Class="De_thi_mau_00.Window1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -295,20 +299,20 @@ namespace De_thi_mau_00
         FontSize="16"
         WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded">
-    <Grid Margin="10">
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" IsReadOnly="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Category ID" Binding="{Binding CategoryID}" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width=".2*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Category Name" Binding="{Binding CategoryName}" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width=".2*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Total Money Product" Binding="{Binding TotalMoneyProduct, StringFormat={}{0:N0}}" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width=".2*"></DataGridTextColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-    </Grid>
-</Window>
+            <Grid Margin="10">
+                <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Category ID" Binding="{Binding CategoryID}" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width=".2*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Category Name" Binding="{Binding CategoryName}" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width=".2*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Total Money Product" Binding="{Binding TotalMoneyProduct, StringFormat={}{0:N0}}" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Width=".2*"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Window>
 
-  
-  
-using De_thi_mau_00.model;
+
+
+        using De_thi_mau_00.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -325,10 +329,11 @@ using System.Windows.Shapes;
 
 namespace De_thi_mau_00
 {
-    /// <summary>
-    /// Interaction logic for Window1.xaml
-    /// </summary>
-    public partial class Window1 : Window
+    ///
+        <summary>
+            /// Interaction logic for Window1.xaml
+    ///</summary>
+        public partial class Window1 : Window
     {
         SALESMANAGEMENTContext db = new();
         public Window1()
@@ -358,5 +363,4 @@ namespace De_thi_mau_00
             dataGrid.ItemsSource = query2.ToList();
         }
     }
-}
-
+}-->
